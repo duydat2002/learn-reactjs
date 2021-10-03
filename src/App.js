@@ -1,11 +1,11 @@
 import React from 'react';
 // import './styles.scss';
-import StateBasic from './features/StateBasic/index';
+import TodoFeature from './features/Todo';
 
 const App = () => {
     return (
-        <div ClassName="App">
-            <StateBasic></StateBasic>
+        <div className="App">
+            <TodoFeature></TodoFeature>
         </div>
     );
 };
