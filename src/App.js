@@ -1,11 +1,11 @@
 import React from 'react';
 // import './styles.scss';
-import TodoFeature from './features/Todo';
+import CustomHook from './features/HookBasic/index';
 
 const App = () => {
     return (
         <div className="App">
-            <TodoFeature></TodoFeature>
+            <CustomHook/>
         </div>
     );
 };
