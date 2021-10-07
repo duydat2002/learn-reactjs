@@ -11,10 +11,10 @@ const TodoFeature = () => {
         <div>
             Todo Feature
             <Switch>
-                <Route path={match.path} component={ListPage} exact/>
-                <Route path={`${match.path}/:todoId`} component={DetailPage} exact/>
+                <Route path={match.path} component={ListPage} exact />
+                <Route path={`${match.path}/:todoId`} component={DetailPage} exact />
 
-                <Route component={NotFound}/>
+                <Route component={NotFound} />
             </Switch>
         </div>
     );
