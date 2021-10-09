@@ -2,6 +2,7 @@ import queryString from 'query-string';
 import React, { useEffect, useMemo, useState } from 'react';
 import { useHistory, useLocation, useRouteMatch } from 'react-router';
 import TodoList from '../../components/TodoList/index';
+import TodoForm from './../../components/TodoForm/index';
 
 const ListPage = () => {
     const initTodoList = [
@@ -83,8 +84,22 @@ const ListPage = () => {
         );
     }, [todoList, filteredStatus]);
 
+    const handleTodoFormSubmit = (values) => {
+        console.log('Form submit: ', values);
+        const newTodo = {
+            id: todoList.length + 1,
+            title: values.title,
+            status: 'new',
+        };
+
+        setTodoList([...todoList, newTodo]);
+    };
+
     return (
         <div>
+            <h3>Todo Form</h3>
+            <TodoForm onSubmit={handleTodoFormSubmit} />
+
             <h2>Todo List</h2>
             <TodoList todoList={renderTodoList} onTodoClick={handleTodoClick} />
             <div>
